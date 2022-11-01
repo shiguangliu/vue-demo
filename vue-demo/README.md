@@ -1,39 +1,8 @@
-## VUE-cli脚手架初始化项目
-## node + webpack + 淘宝镜像
-
-node_modules文件夹:项目依赖
-public文件夹:一般放置一些静态资源（图片），放在public文件夹中的静态资源，webpack进行打包的时候会原封不动打动到dist文件夹中
-src文件夹(程序员源代码文件夹):
-    assets文件夹:一般也是防止静态资源（一般放置多个组件公用的静态资源），需要注意，放置在assets文件夹里面的静态资源，在webpack打包的时候，webpack会把静态资源当成一个模块，打包js文件里面
-    components文件夹:一般放置的是非路由组件（全局组件）
-    App.vue:唯一的根组件，vue当中的组件（.vue）
-    main.js:程序入口文件，也是整个程序当中最先执行的文件
-
-babel.config.js:配置文件（babel相关）
-package.json文件:认为项目'身份证'，记录项目叫做什么、项目当中有哪些依赖、项目怎么运行
-package-lock.json:缓存性文件
-
-## 项目配置
-1:如果运行成功后让浏览器自动打开:在package.json文件中"serve": "vue-cli-service serve"添加--open,
-"scripts": {
-    "serve": "vue-cli-service serve --open",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
-}然后在vue.config.js文件中添加: devServer: {host: 'localhost',port: 8080,},
-
-2:eslint校验功能关闭
---- 在vue.config.js中添加 lintOnSave: false
-
-3:项目路由的分析
-vue-router
-前端所谓路由:key键值对
-key:URL(地址栏中的路径)
-value: 相应的路由组件
-
 ## 开发环境安装
+
 ```bash
 # 1：安装node
-前端开发框架和环境都是需要 Node.js ，先安装node.js开发环境，vue的运行是要依赖于node的npm的管理工具来实现， node为最新时node sass与sass-loader也要跟着更新
+前端开发框架和环境都是需要 Node.js ，先安装node.js开发环境，vue的运行是要依赖于node的npm的管理工具来实现，
 下载https://nodejs.org/en/，（安装LTS版本）安装完成之后，打开cmd开始输入命令。（win10系统需要管理员权限，右键点击以管理员身份运行cmd，否则可能会出现很多报错）
 
 # 2：查看node的版本号
@@ -43,8 +12,6 @@ value: 相应的路由组件
 #3、全局安装 vue-cli
 npm install --global vue-cli
 或 sudo npm install vue-cli -g
-
-#4、mac电脑通过终端安装python
 ```
 
 ## 开发
